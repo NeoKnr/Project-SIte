@@ -1,0 +1,9 @@
+{% if tel_list %}
+    <ul>
+    {% for t in tel_list %}
+        <li><a href="{% url 'detail' t.id %}">{{ t.marque}} {{t.modele}} couleur {{t.coloris}} {{t.prix}}€</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun contact n'a été enregistré.</p>
+{% endif %}
